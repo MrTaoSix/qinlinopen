@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.mrtao.qinlinopen.QinlinopenApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.314 s - in com.mrtao.qinlinopen.QinlinopenApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.845 s - in com.mrtao.qinlinopen.QinlinopenApplicationTests

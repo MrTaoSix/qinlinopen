@@ -1,2 +1,15 @@
 language: java
-script: true
+services:
+  - docker
+sudo: required
+branches:
+  only:
+    - master
+#使用ssh登陆的时候会确认主机信息，travis-ci自动化运行无法进行交互操作，所以在.travis.yml中添加以下内容跳过确认
+
+script:
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - docker build -t registry.cn-hangzhou.aliyuncs.com/jafir_docker_images/jafir-images:latest .
+after_success:
+  - $ sudo docker login --username=tb2265570_2012 -p=25nrskhdzl registry.cn-hangzhou.aliyuncs.com
+  - $ sudo docker push registry.cn-hangzhou.aliyuncs.com/mrtao/mrtao:[1.0]
