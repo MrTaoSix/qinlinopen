@@ -11,6 +11,6 @@ script:
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
   - docker build -t qinlinopen:0.0.1 .
 after_success:
-  - $ sudo docker login --username=tb2265570_2012 -p=25nrskhdzl registry.cn-hangzhou.aliyuncs.com
-  - $ sudo docker tag qinlinopen registry.cn-hangzhou.aliyuncs.com/mrtao/mrtao:0.0.1
-  - $ sudo docker push registry.cn-hangzhou.aliyuncs.com/mrtao/mrtao:0.0.1
+  - sudo docker login --username=tb2265570_2012 -p=25nrskhdzl registry.cn-hangzhou.aliyuncs.com
+  - sudo docker tag qinlinopen registry.cn-hangzhou.aliyuncs.com/mrtao/mrtao:0.0.1
+  - sudo docker push registry.cn-hangzhou.aliyuncs.com/mrtao/mrtao:0.0.1
