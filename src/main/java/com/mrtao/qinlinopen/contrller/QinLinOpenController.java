@@ -44,4 +44,10 @@ public class QinLinOpenController {
         return qinLinServer.updateSessionId(code);
     }
 
+    @RequestMapping(value="/test",method =  RequestMethod.GET,produces = "application/json; charset=utf-8")
+    public String test(@RequestParam(value="code") String  code){
+
+        return "Success";
+    }
+
 }
